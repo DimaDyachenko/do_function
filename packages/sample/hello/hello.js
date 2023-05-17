@@ -1,8 +1,6 @@
-function main(args) {
-    let name = args.name || 'stranger'
-    let greeting = 'Hello ' + name + '!'
-    console.log(greeting)
-    return {"body": greeting}
+function main(event, context) {
+    console.log(event)
+    return {"body": event, "context": context}
   }
 
 exports.main = main
